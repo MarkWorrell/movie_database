@@ -47,7 +47,7 @@ class HomeController extends Controller
 
     public function index()
     {
-        $favourites = false;
+        $favourites = [];
         $value = \Cookie::get('aglet_movie_database');
 
         if($value){
@@ -78,7 +78,7 @@ class HomeController extends Controller
 
                 Mail::to($request->email)
                 ->send(new AddContactEmail(['contact' => $request->except('_token')]));
-                
+
                 Mail::to('mark@kccs.co.za')
                 ->send(new AdminContactEmail(['contact' => $request->except('_token')]));
 
