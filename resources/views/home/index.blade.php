@@ -21,8 +21,10 @@
         <section class="tiles">
             @foreach($movies as $movie)
             <div class="image text-center">
-                <div class="{{ in_array($movie->movie_id, $favourites) ? 'favourite-set' : 'favourite' }}" id="{{ $movie->movie_id }}" data-id="{{ $movie->movie_id }}"><i class="fas fa-heart"></i></div>
-                <img src="https://image.tmdb.org/t/p/original/{{ $movie->poster }}" class="show-movie" alt="{{ $movie->title }}" data-id="{{ $movie->movie_id }}" />
+                <div>
+                    <div class="{{ in_array($movie->movie_id, $favourites) ? 'favourite-set' : 'favourite' }}" id="{{ $movie->movie_id }}" data-id="{{ $movie->movie_id }}"><i class="fas fa-heart"></i></div>
+                    <img src="https://image.tmdb.org/t/p/original/{{ $movie->poster }}" class="show-movie" alt="{{ $movie->title }}" data-id="{{ $movie->movie_id }}" />
+                </div>
                 <h5>{{ $movie->title }}</h5>
                 <h6>{{ \Carbon\Carbon::parse($movie->release_date)->format('jS M Y') }}</h6>
             </div>

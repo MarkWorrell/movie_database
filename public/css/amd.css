@@ -36,6 +36,7 @@ html, body{
     width: 9vw;
     margin-left:0.5vw;
     margin-right:0.5vw;
+    position: relative;
 }
 
     .image img{

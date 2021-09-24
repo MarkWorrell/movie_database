@@ -95,6 +95,7 @@ class HomeController extends Controller
     {
         if ($request->ajax())
         {
+            $update = true;
             $value = \Cookie::get('aglet_movie_database');
 
             if($value){

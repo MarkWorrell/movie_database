@@ -1,6 +1,6 @@
 jQuery(function ()
 {
-    $('body').on('click', '.show-movie', function ()
+    $('body').on('click touch', '.show-movie', function ()
     {
         var id = $(this).data('id');
 
